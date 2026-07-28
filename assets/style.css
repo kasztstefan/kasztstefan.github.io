@@ -32,7 +32,21 @@ img { max-width: 100%; height: auto; }
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
 }
-.brand { font-family: var(--serif); font-size: 1.15rem; letter-spacing: 0.02em; }
+.brand {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.brand-logo {
+  width: 30px;
+  height: auto;
+  background: #f5f2e9;
+  border-radius: 4px;
+  padding: 2px;
+}
 .lang a {
   color: #cdd9ea;
   text-decoration: none;
@@ -62,12 +76,29 @@ h1 {
   margin: 0 0 1rem;
 }
 .lead { font-size: 1.2rem; color: #dbe4f0; margin: 0; }
-.portrait {
-  width: 100%;
-  max-width: 340px;
-  border-radius: 10px;
+.portrait-wrap {
+  position: relative;
   justify-self: end;
+  max-width: 340px;
+  width: 100%;
+}
+.portrait {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+.hero-crest {
+  position: absolute;
+  bottom: -10%;
+  left: -14%;
+  width: 34%;
+  height: auto;
+  background: #f5f2e9;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+  transform: rotate(-10deg);
 }
 
 .bio { padding: 2.5rem 0 1rem; }
@@ -135,5 +166,6 @@ footer p { margin: 0; }
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
-  .portrait { justify-self: start; max-width: 260px; }
+  .portrait-wrap { justify-self: start; max-width: 260px; }
+  .hero-crest { left: -4%; bottom: -8%; width: 35%; }
 }
